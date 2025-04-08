@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AngularJS Input Binding Example</title>
+  <!-- Include AngularJS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body>
+
+  <div ng-controller="myCtrl">
+    <!-- First Name Input Field -->
+    First Name: <input type="text" ng-model="firstName"><br><br>
+
+    <!-- Last Name Input Field -->
+    Last Name: <input type="text" ng-model="lastName"><br><br>
+
+    <!-- Display Full Name -->
+    Full Name: {{firstName + " " + lastName}}<br><br>
+  </div>
+
+  <script>
+    // AngularJS Application Module
+    var app = angular.module('myApp', []);
+
+    // Controller Definition
+    app.controller('myCtrl', function($scope) {
+      // Initial Values for First Name and Last Name
+      $scope.firstName = "Sarthak";
+      $scope.lastName = "Gaikwad";
+    });
+  </script>
+
+</body>
+
+</html>
